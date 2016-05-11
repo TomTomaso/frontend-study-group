@@ -13,5 +13,6 @@
     "lite-server": "^2.2.0"
   },
   "dependencies": {
+    "dress-code": "^2.0.0-alpha"
   }
 }

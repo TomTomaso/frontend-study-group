@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello Study Group</title>
+    <link href="node_modules/dress-code/dist/css/dress-code.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
     <script src="src/input.js"></script>
@@ -10,23 +11,31 @@
 </head>
 <body>
 
-<p>hello world!</p>
+<h2 class="dc-h2">Hello study group!</h2>
+<section class="dc-card">
+    <div>
+        <label class="dc-label" >example 1</label><input id="testid1" type="text">
+    </div>
+    <br>
+    <div>
+        <label class="dc-label" >example 2</label><input id="testid2" type="text">
+        <p id="testoutput2"></p>
+    </div>
+    <br>
+    <div>
+        <label class="dc-label" >example 3</label><input id="testid3" type="text">
+        <ul id="example3list">
 
-<div>
-    <label>examle 1</label><input id="testid1" type="text">
-</div>
-<br>
-<div>
-    <label>examle 2</label><input id="testid2" type="text">
-    <p id="testoutput2"></p>
-</div>
-<br>
-<div>
-    <label>examle 3</label><input id="testid3" type="text">
-    <ul id="example3list">
+        </ul>
+    </div>
 
-    </ul>
-</div>
+    <div>
+        <label class="dc-label" >example 4</label><input id="testid4" type="text">
+        <ul id="example4list">
+
+        </ul>
+    </div>
+</section>
 
 
 </body>

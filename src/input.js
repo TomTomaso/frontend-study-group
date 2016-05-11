@@ -20,11 +20,33 @@ function initInputHandlerExample3() {
         }
     });
 }
-function init(){
+function initInputHandlerExample4() {
+
+    function getListEntry(value) {
+        return '<li>' + value+ ' <small class="killme">x</small></li>'
+    }
+
+    function registerKillHandler() {
+        $('.killme').click(function(){
+            this.parentElement.remove();
+        });
+    }
+
+    $('#testid4').keypress(function(element){
+        if(element.which == 13){
+            $('#example4list').append(getListEntry(this.value));
+            this.value = "";
+            registerKillHandler();
+        }
+    });
+}
+
+    function init(){
     console.log("ready");
     initInputHandlerExample1();
     initInputHandlerExample2();
     initInputHandlerExample3();
+    initInputHandlerExample4();
 }
 
 $(document).ready(init);
