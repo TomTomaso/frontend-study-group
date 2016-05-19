@@ -33,7 +33,7 @@ function initInputHandlerExample4() {
     }
 
     $('#testid4').keypress(function(element){
-        if(element.which == 13){
+        if(element.which == 13) {
             $('#example4list').append(getListEntry(this.value));
             this.value = "";
             registerKillHandler();
@@ -41,7 +41,7 @@ function initInputHandlerExample4() {
     });
 }
 
-    function init(){
+function init() {
     console.log("ready");
     initInputHandlerExample1();
     initInputHandlerExample2();
