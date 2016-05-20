@@ -17,15 +17,52 @@
 
 ## Frameworks
 
-### jQuery
+### jQuery ([API](http://api.jquery.com/))
 
 * Adds a $ object to the global scope with a bunch of methonds in it
 
-*Code examples:*
+#### Code examples:
 
-jQuery | JavaScript
------- | ----------
+**Select a DOM element**
 
+jQuery:
+```javascript
+$('#myElement'); 
+```
+JavaScript:
+```javascript
+document.getElementById(“myElement”);
+```
+
+**Show an alert after clicking a button**
+
+jQuery:
+```javascript
+$(‘#myButton”).click(function() { 
+   alert(“Hello”); 
+}); 
+```
+JavaScript:
+```javascript
+document.getElementById(“myButton”)
+   .addEventListener(‘click’, function() { 
+      alert(“Hello”); 
+   });
+```
+
+**Change the background color of a div**
+
+jQuery:
+```javascript
+$('.greenDiv').css('background', 'green');
+```
+JavaScript:
+```javascript
+function changeBackground (color) {
+        document.body.style.background = color;
+}
+<div class=“greenDiv” onload=”changeBackground (‘green’);”>
+```
 
 ### Underscore / Lodash
 
