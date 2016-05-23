@@ -1,5 +1,33 @@
 # Chapter 2: No framework, no panic
 
+## A bit of history: evolution of JavaScript frameworks
+
+### Vanilla JavaScript
+
+In the beginning, there was just JavaScript and almost everyone was afraid to use it because of the inconsistent DOM APIs across different browsers which resulted in lots of bugs.
+
+### jQuery
+
+jQuery came along and it was a great step forward, making DOM manipulation and AJAX calls less risky by abstracting away the differences into one consistent API. 
+
+As developers began to write more and more JavaScript and jQuery to make their applications more innovative their code quickly became messier and difficult to manage.
+
+### 1st generation of MV* frameworks: Backbone, Knockout...
+
+Backbone arrived and provided organization to that messy jQuery code and allowed a new generation of applications to be built in the browser by adding a thin layer on top of the familiar jQuery code developers were already writing.  
+
+Developers still found it difficult to be productive and longed for features such as data binding, for which then Knockout came along providing it but didn’t actually have any other features that developers needed to build single page applications (SPA).
+
+These lack of features was partially solved by the appearance of libraries such as Underscore or Lodash.
+
+### 2nd generation of MV* frameworks: Angular, Ember...
+
+At this point a second generation of more robust frameworks began to come out.  Angular emerged with all the needed framework pieces in one box: data binding, routing, templating, persistence as well as a compelling testing story and a more declarative syntax. 
+
+### 3rd generation of MV* frameworks: React, Angular2
+
+Though the 2nd generation was adopted by many developers in their projects and are still really popular nowadays, they presented some quite notorious performance problems and some other like having a quite steep learning curve which are the areas that the current modern generation of MV* frameworks try to tackle allowing the creation of applications following the new paradigm the web development scene is moving to, the web components.
+
 ## Frameworks vs JavaScript
 
 ### Why to use a framework?
@@ -66,6 +94,6 @@ function changeBackground (color) {
 
 ### Underscore / Lodash
 
-### Backbone / Ember / Angular / React
+### MV* frameworks
 
-
+### AngularJS ([API](https://docs.angularjs.org/api))
