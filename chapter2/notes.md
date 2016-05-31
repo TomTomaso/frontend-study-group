@@ -99,24 +99,49 @@ Underscore.js is a JavaScript library which provides utility functions for commo
 Nowadays though, with the appearance of ES5 and ES6 most of their utilities can be replaced by plain JavaScript.
 
 **Filter even numbers of an array**
+([Play it](https://jsfiddle.net/_dami_/53xdLjxq/))
 
 JavaScript < ES5:
 ```javascript
-var evenNumbers = [];
-var testArray = [1, 2, 3, 4, 5, 6];
-for (var i = 0, length = testArray.length; i < length; i++) {
- if (testArray[i] % 2 === 0) {
-	 evenJS.push(testArray[i]);
-	}
+...
+for (var i = 0, length = array.length; i < length; i++) {
+   if (array[i] % 2 === 0) {
+      evenNumbers.push(array[i]);
+   }
 }
 ```
 Underscore:
 ```javascript
-_.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 === 0; });
+_.filter(array, function(num){ return num % 2 === 0; });
 ```
 JavaScript > ES5:
 ```javascript
-[1, 2, 3, 4, 5, 6].filter(function(num){ return num % 2 === 0; });
+array.filter(function(num){ return num % 2 === 0; });
+```
+
+**Difference between two arrays**
+([Play it](https://jsfiddle.net/_dami_/x9j4g234/))
+
+JavaScript:
+```javascript
+function calculateDiff (first, second) {
+    var diff = [];
+    if (!Array.isArray(first) || !Array.isArray(second)) {
+        return diff;
+    }
+
+    for (var key, i = 0, length = first.length; i < length; i++) {
+      key = first[i];
+      if (second.indexOf(key) === -1) {
+        diff.push(key);
+      }
+    }
+    return diff;
+}
+```
+Underscore:
+```javascript
+_.difference(firstArray, secondArray);
 ```
 
 ## MV* frameworks
