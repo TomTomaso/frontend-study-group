@@ -33,10 +33,7 @@ Though the 2nd generation was adopted by many developers in their projects and a
 ### Why to use a framework?
 
 * Cross-browser compatibility
-* Security
-* Clean, modular and reusable architecture
 * Code simplification (e.g.: AJAX calls, DOM manipulation...)
-* Routing (SPA)
 * Access to future features of JavaScript not yet supported by all browsers
 
 ### Why you should still learn JavaScript first?
@@ -99,5 +96,4 @@ function changeBackground (color) {
 
 ### MV* frameworks
 
-## AngularJS ([API](https://docs.angularjs.org/api))
-
+### AngularJS ([API](https://docs.angularjs.org/api))
