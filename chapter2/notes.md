@@ -1,6 +1,6 @@
 # Chapter 2: No framework, no panic
 
-## A bit of history: evolution of JavaScript frameworks
+## A bit of history: evolution of JavaScript scene
 
 ### Vanilla JavaScript
 
@@ -43,7 +43,7 @@ Though the 2nd generation was adopted by many developers in their projects and a
   * Portable (easier to adapt to any other application)
   * Saves bandwidth
 
-## Frameworks
+## Libraries
 
 ### jQuery ([API](http://api.jquery.com/))
 
@@ -64,12 +64,6 @@ document.getElementById(“myElement”);
 
 **Show an alert after clicking a button**
 
-jQuery:
-```javascript
-$(‘#myButton”).click(function() { 
-   alert(“Hello”); 
-}); 
-```
 JavaScript:
 ```javascript
 document.getElementById(“myButton”)
@@ -77,13 +71,15 @@ document.getElementById(“myButton”)
       alert(“Hello”); 
    });
 ```
+jQuery:
+```javascript
+$(‘#myButton”).click(function() { 
+   alert(“Hello”); 
+}); 
+```
 
 **Change the background color of a div**
 
-jQuery:
-```javascript
-$('.greenDiv').css('background', 'green');
-```
 JavaScript:
 ```javascript
 function changeBackground (color) {
@@ -91,9 +87,38 @@ function changeBackground (color) {
 }
 <div class=“greenDiv” onload=”changeBackground (‘green’);”>
 ```
+jQuery:
+```javascript
+$('.greenDiv').css('background', 'green');
+```
 
-### Underscore / Lodash
+### Underscore ([API](http://underscorejs.org/))
 
-### MV* frameworks
+Underscore.js is a JavaScript library which provides utility functions for common programming tasks.
+
+Nowadays though, with the appearance of ES5 and ES6 most of their utilities can be replaced by plain JavaScript.
+
+**Filter even numbers of an array**
+
+JavaScript < ES5:
+```javascript
+var evenNumbers = [];
+var testArray = [1, 2, 3, 4, 5, 6];
+for (var i = 0, length = testArray.length; i < length; i++) {
+ if (testArray[i] % 2 === 0) {
+	 evenJS.push(testArray[i]);
+	}
+}
+```
+Underscore:
+```javascript
+_.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 === 0; });
+```
+JavaScript > ES5:
+```javascript
+[1, 2, 3, 4, 5, 6].filter(function(num){ return num % 2 === 0; });
+```
+
+## MV* frameworks
 
 ### AngularJS ([API](https://docs.angularjs.org/api))
