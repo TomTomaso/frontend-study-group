@@ -30,6 +30,8 @@ Though the 2nd generation was adopted by many developers in their projects and a
 
 ## Frameworks vs JavaScript
 
+![Tweet](img/tweet.png)
+
 ### Why to use a framework?
 
 * Cross-browser compatibility
