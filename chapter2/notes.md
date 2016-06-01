@@ -36,7 +36,8 @@ Though the 2nd generation was adopted by many developers in their projects and a
 
 * Cross-browser compatibility
 * Code simplification (e.g.: AJAX calls, DOM manipulation...)
-* Access to future features of JavaScript not yet supported by all browsers
+* Avoid reinventing the wheel
+* Security features
 
 ### Why you should still learn JavaScript first?
 
@@ -47,7 +48,7 @@ Though the 2nd generation was adopted by many developers in their projects and a
 
 ## Libraries
 
-### jQuery ([API](http://api.jquery.com/))
+### jQuery [API](http://api.jquery.com/)
 
 * Adds a $ object to the global scope with a bunch of methonds in it
 
@@ -94,14 +95,14 @@ jQuery:
 $('.greenDiv').css('background', 'green');
 ```
 
-### Underscore ([API](http://underscorejs.org/))
+### Underscore [API](http://underscorejs.org/)
 
 Underscore.js is a JavaScript library which provides utility functions for common programming tasks.
 
 Nowadays though, with the appearance of ES5 and ES6 most of their utilities can be replaced by plain JavaScript.
 
 **Filter even numbers of an array**
-([Play it](https://jsfiddle.net/_dami_/53xdLjxq/))
+[Play it](https://jsfiddle.net/_dami_/53xdLjxq/)
 
 JavaScript < ES5:
 ```javascript
@@ -122,7 +123,7 @@ array.filter(function(num){ return num % 2 === 0; });
 ```
 
 **Difference between two arrays**
-([Play it](https://jsfiddle.net/_dami_/x9j4g234/))
+[Play it](https://jsfiddle.net/_dami_/x9j4g234/)
 
 JavaScript:
 ```javascript
@@ -148,4 +149,33 @@ _.difference(firstArray, secondArray);
 
 ## MV* frameworks
 
-### AngularJS ([API](https://docs.angularjs.org/api))
+### AngularJS [API](https://docs.angularjs.org/api)
+
+**Hello world**
+
+AngularJS:
+[Play it](https://jsfiddle.net/_dami_/oucgd4se/)
+```html
+<body ng-app>
+  <div>
+     <label for="myInput">Name: </label>
+    <input type="text" id="myInput" placeholder="Please enter your name" data-ng-model="name" />
+    <h1 id="myLabel">Hello {{name}}</h1>
+  </div>
+</body>
+```
+
+jQuery:
+[Play it](https://jsfiddle.net/_dami_/Lnhdknfr/)
+```javascript
+$(function () {  
+	$(document).keyup(function () {  
+  	var name = $("#myInput").val();  
+    $("#myLabel").html(name);  
+  });  
+}); 
+```
+
+## Further reading
+
+* [Getting cozy with UnderscoreJS](http://code.tutsplus.com/tutorials/getting-cozy-with-underscorejs--net-24581)
