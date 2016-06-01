@@ -1,6 +1,6 @@
 # Chapter 2: No framework, no panic
 
-## A bit of history: evolution of JavaScript frameworks
+## A bit of history: evolution of JavaScript scene
 
 ### Vanilla JavaScript
 
@@ -30,11 +30,14 @@ Though the 2nd generation was adopted by many developers in their projects and a
 
 ## Frameworks vs JavaScript
 
+![Tweet](img/tweet.png)
+
 ### Why to use a framework?
 
 * Cross-browser compatibility
 * Code simplification (e.g.: AJAX calls, DOM manipulation...)
-* Access to future features of JavaScript not yet supported by all browsers
+* Avoid reinventing the wheel
+* Security features
 
 ### Why you should still learn JavaScript first?
 
@@ -43,9 +46,9 @@ Though the 2nd generation was adopted by many developers in their projects and a
   * Portable (easier to adapt to any other application)
   * Saves bandwidth
 
-## Frameworks
+## Libraries
 
-### jQuery ([API](http://api.jquery.com/))
+### jQuery [API](http://api.jquery.com/)
 
 * Adds a $ object to the global scope with a bunch of methonds in it
 
@@ -64,12 +67,6 @@ document.getElementById(“myElement”);
 
 **Show an alert after clicking a button**
 
-jQuery:
-```javascript
-$(‘#myButton”).click(function() { 
-   alert(“Hello”); 
-}); 
-```
 JavaScript:
 ```javascript
 document.getElementById(“myButton”)
@@ -77,13 +74,15 @@ document.getElementById(“myButton”)
       alert(“Hello”); 
    });
 ```
+jQuery:
+```javascript
+$(‘#myButton”).click(function() { 
+   alert(“Hello”); 
+}); 
+```
 
 **Change the background color of a div**
 
-jQuery:
-```javascript
-$('.greenDiv').css('background', 'green');
-```
 JavaScript:
 ```javascript
 function changeBackground (color) {
@@ -91,9 +90,92 @@ function changeBackground (color) {
 }
 <div class=“greenDiv” onload=”changeBackground (‘green’);”>
 ```
+jQuery:
+```javascript
+$('.greenDiv').css('background', 'green');
+```
 
-### Underscore / Lodash
+### Underscore [API](http://underscorejs.org/)
 
-### MV* frameworks
+Underscore.js is a JavaScript library which provides utility functions for common programming tasks.
 
-### AngularJS ([API](https://docs.angularjs.org/api))
+Nowadays though, with the appearance of ES5 and ES6 most of their utilities can be replaced by plain JavaScript.
+
+**Filter even numbers of an array**
+[Play it](https://jsfiddle.net/_dami_/53xdLjxq/)
+
+JavaScript < ES5:
+```javascript
+...
+for (var i = 0, length = array.length; i < length; i++) {
+   if (array[i] % 2 === 0) {
+      evenNumbers.push(array[i]);
+   }
+}
+```
+Underscore:
+```javascript
+_.filter(array, function(num){ return num % 2 === 0; });
+```
+JavaScript > ES5:
+```javascript
+array.filter(function(num){ return num % 2 === 0; });
+```
+
+**Difference between two arrays**
+[Play it](https://jsfiddle.net/_dami_/x9j4g234/)
+
+JavaScript:
+```javascript
+function calculateDiff (first, second) {
+    var diff = [];
+    if (!Array.isArray(first) || !Array.isArray(second)) {
+        return diff;
+    }
+
+    for (var key, i = 0, length = first.length; i < length; i++) {
+      key = first[i];
+      if (second.indexOf(key) === -1) {
+        diff.push(key);
+      }
+    }
+    return diff;
+}
+```
+Underscore:
+```javascript
+_.difference(firstArray, secondArray);
+```
+
+## MV* frameworks
+
+### AngularJS [API](https://docs.angularjs.org/api)
+
+**Hello world**
+
+AngularJS:
+[Play it](https://jsfiddle.net/_dami_/oucgd4se/)
+```html
+<body ng-app>
+  <div>
+     <label for="myInput">Name: </label>
+    <input type="text" id="myInput" placeholder="Please enter your name" data-ng-model="name" />
+    <h1 id="myLabel">Hello {{name}}</h1>
+  </div>
+</body>
+```
+
+jQuery:
+[Play it](https://jsfiddle.net/_dami_/Lnhdknfr/)
+```javascript
+$(function () {  
+	$(document).keyup(function () {  
+  	var name = $("#myInput").val();  
+    $("#myLabel").html(name);  
+  });  
+}); 
+```
+
+## Further reading
+
+* [Getting cozy with UnderscoreJS](http://code.tutsplus.com/tutorials/getting-cozy-with-underscorejs--net-24581)
