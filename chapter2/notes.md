@@ -121,6 +121,20 @@ JavaScript > ES5:
 ```javascript
 array.filter(function(num){ return num % 2 === 0; });
 ```
+**Exercise time!**
+
+use jsfiddle or local dev environment, use underscore and ES6 API (hint: www.devdocs.io all JS apis in a SPA)
+- solve it in underscore and in ES6
+- Get the Maximum Number of the array
+
+  [1,2,3,4,5,6]
+=> 6
+- get the keys of a object
+```javascript
+{ruben: 31, thomas: 32, sophie: 30 }
+=> ["ruben", "thomas", "sophie"]
+```
+
 
 **Difference between two arrays**
 [Play it](https://jsfiddle.net/_dami_/x9j4g234/)
@@ -179,3 +193,20 @@ $(function () {
 ## Further reading
 
 * [Getting cozy with UnderscoreJS](http://code.tutsplus.com/tutorials/getting-cozy-with-underscorejs--net-24581)
+
+## Homework
+* add underscore to your project
+* add "created at" as a new field to the todo list.
+* add "author" as a new field to the todo list.
+* add dropdown to select the sort method
+  * use underscore to sort the todo-list with index of createdAt / author. 
+  * use ES6 to sort the todo-list with index of createdAt / author.
+* add dropdown to select the render method
+  * (todo-name -> "test todo"), (todo-name, author -> "test todo, Thomas Meyer"), (todo-name, author, created -> "test todo, Thomas Meyer, 22.3.1901")
+  * on every value change of the dropdown with the render method, the todo list will be rerendered with the given method.
+  * use underscore for it and implement it also with ES6
+* Outcome: 
+  * you should learn the api features of underscore and ES6
+  * how to use and develop with an api. Get known of the features. 
+  * Implement every short algorithm in a function, one version in ES6 one in underscore. like ("function sortByNameES6()" and "function sortByNameUS()"
+
