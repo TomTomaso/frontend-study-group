@@ -193,6 +193,7 @@ $(function () {
 ## Further reading
 
 * [Getting cozy with UnderscoreJS](http://code.tutsplus.com/tutorials/getting-cozy-with-underscorejs--net-24581)
+* [10 Lodash features you can replace with ES6](https://www.sitepoint.com/lodash-features-replace-es6/?utm_source=javascriptweekly&utm_medium=email)
 
 ## Homework
 * add underscore to your project
