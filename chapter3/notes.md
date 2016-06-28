@@ -44,7 +44,7 @@ module.exports = function(config) {
 
 1. Write function for capitalizing a string and write unit tests for it
 2. Write function for capitalizing all words in the sentence and write unit tests for it
-3. Write funciton for capitalizing all words 
+3. Write function for capitalizing all words in all sentences in given array 
 4. Write function for displaying capitalized sentences in the list (`<ul>`) on the web page
 
 ## files
