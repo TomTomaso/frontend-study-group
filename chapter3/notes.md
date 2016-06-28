@@ -26,15 +26,17 @@ npm install --save-dev karma-jasmine
 
 ```javascript
 module.exports = function(config) {
-   files: ['**/*.js'],
-   frameworks: ['jasmine'],
-   browsers: ['PhantomJS'],
-   plugins: [
-     'karma-jasmine',
-     'karma-phantomjs-launcher'
-   ]
-   autoWatch: false,
-   singleRun: true
+   config.set({
+      files: ['src/*.js'],
+      frameworks: ['jasmine'],
+      browsers: ['PhantomJS'],
+      plugins: [
+         'karma-jasmine',
+         'karma-phantomjs-launcher'
+      ]
+      autoWatch: false,
+      singleRun: true
+   });
 };
 ```
 
@@ -49,8 +51,8 @@ module.exports = function(config) {
 
 Test files should be separated and mirror the naming of the source files, like:
 ```
-my-module.js
-my-module-spec.js
+src/my-module.js
+src/my-module-spec.js
 ```
 
 ## running tests
