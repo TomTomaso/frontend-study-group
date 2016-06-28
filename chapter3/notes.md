@@ -111,6 +111,11 @@ What we should NOT test in unit testing?
 - mocking
 - dependency injection
 
+## when a test is good?
+- test should cover main cases and edge cases
+- beware of false positives
+- how to test a test? break the functionality
+
 ## references
 
 * https://karma-runner.github.io/1.0/config/configuration-file.html
