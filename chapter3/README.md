@@ -16,5 +16,5 @@ npm test
 
 ## More information
 
-https://github.com/TomTomaso/frontend-study-group/edit/master/chapter3/notes.md
+https://github.com/TomTomaso/frontend-study-group/blob/master/chapter3/notes.md
 
