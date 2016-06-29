@@ -66,9 +66,12 @@ npm test
 ## example test
 
 ```javascript
-describe('myFunction', function() {
-  it('should return "fancy!"', function() {
-    expect(myFunction()).toEqual('fancy!');
+describe('sum', function() {
+  it('should add two numbers', function() {
+    // main case
+    expect(sum(5,3)).toEqual(8);
+    // edge case
+    expect(sum(5,null)).toEqual(5);
   });
 });
 
@@ -101,6 +104,12 @@ What we should NOT test in unit testing?
 
 - White-box tests (isolated, but implementation-dependent)
 - Black-box tests (not isolated, but behavior-based)
+
+## when to write a test?
+
+- before implementation
+- after implementation
+- together with implementation
 
 ## code that is easy to test
 
