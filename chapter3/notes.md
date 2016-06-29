@@ -105,7 +105,7 @@ What we should NOT test in unit testing?
 - White-box tests (isolated, but implementation-dependent)
 - Black-box tests (not isolated, but behavior-based)
 
-## when to write a test?
+## when to write a test? - 3 ways
 
 - before implementation
 - after implementation
